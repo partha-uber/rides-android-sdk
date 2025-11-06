@@ -28,8 +28,11 @@ pluginManagement {
   }
   resolutionStrategy {
     eachPlugin {
-      if (requested.id.id == "com.ncorti.ktfmt.gradle") {
-        useModule("com.ncorti.ktfmt.gradle:ktfmt-gradle:${requested.version}")
+      when (requested.id.id) {
+        "com.ncorti.ktfmt.gradle" ->
+          useModule("com.ncorti.ktfmt.gradle:ktfmt-gradle:${requested.version}")
+        "com.diffplug.spotless" ->
+          useModule("com.diffplug.spotless:spotless-plugin-gradle:${requested.version}")
       }
     }
   }
