@@ -94,7 +94,7 @@ public class LoginSampleActivity extends AppCompatActivity {
         SessionConfiguration configuration = new SessionConfiguration.Builder()
                 .setClientId(CLIENT_ID)
                 .setRedirectUri(REDIRECT_URI)
-                .setScopes(Arrays.asList(Scope.PROFILE, Scope.RIDE_WIDGETS))
+                .setScopes(Arrays.asList(Scope.PROFILE))
                 .setProfileHint(new ProfileHint
                         .Builder()
                         .email("john@doe.com")
